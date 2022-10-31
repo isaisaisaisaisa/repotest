@@ -1,0 +1,47 @@
+Well-Architected Module 2
+
+OPERATIONAL EXCELLENCE PILLAR
+the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.
+the focus areas include: organization, prepare, operate, evolve.
+
+OPERATIONAL EXCELLENCE DESIGN PRINCIPLES
+- operational excellence challenges in a traditional environment: manual changes, batch changes, rarely run gamedays, no time to learn from mistakes.
+- operational excellence challenges in the cloud environment: perform operations as code, make frequent, small, reversible changes, refine operations procedures frequently, anticipate failure, learn from all operational failures.
+
+OPERATIONAL EXCELLENCE-ORGANIZATION
+operational priorities, operating model, organizational culture.
+
+	ORGANIZATION-BUSINESS NEEDS
+	-involve business and development teams in setting operational priorities
+	-consider internal and external complience requirements when setting operational priorities
+	-consider trade-offes among operational priorities, and make informed decisions
+
+OPERATIONAL EXCELLENCE-PREPARE
+design telemetry, improve flow, mitigate deployment risks, understand operational readiness.
+
+	PREPARE- USE MULTIPLE ENVIRONMENT
+	-provide developers with individual sandboxes and development environments
+	-use infrastructure as code and configuration management system to deploy environments
+	-increase controls as environments approach production
+	-when environements are not use, turn them off
+
+OPERATIONAL EXCELLENCE-OPERATE
+understanding workload health, understanding operations health
+
+	OPERATE-EVENT, INCIDENT, AND PROBLEM MANAGEMENT
+	-events: observation of interest
+	-incident: an event that requires a response
+	-problem: an incident that either recures or cannot currently be resolved
+
+	runbooks and playbooks should define what initiates escalation for an event and the process for escalation, and identify owners for each action.
+	user should be notified when the services they consume are impacted and when they return to normal operations.
+
+OPERATIONAL EXCELLENCE-EVOLVE
+learn from experience, make improvements, share learning
+
+	EVOLVE-FEEDBACK LOOPS
+	-identify areas for improvement
+	-prioritize and drive improvements where needed
+	-begin an operations activities, customer experience, and business and development teams
+	-recognize improvement
+

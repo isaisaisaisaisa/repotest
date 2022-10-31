@@ -1,0 +1,55 @@
+Well-Architected Module 4 - reliability pillar
+
+RELIABLITY PILLAR
+reliability is the ability of a workload to perform its intended function correctly and consistently when it's expected to.
+this include the ability to operate and test the workload through its total lifecycle. to achieve reliability, we focus on resiliency.
+-recover from infrastructure or service disruptions
+-dynamically acquire computing resources to meet demand
+-mitigate disruptions
+
+the reliability pillar focusses on the ability to recover from failures and meet demand in the following areas:
+-foundations
+-workkload architecture
+-change management
+-failure management
+
+RELIABILITY DESIGN PRINCIPLES
+reliability in a traditional environment:
+-manually recover from failure
+-rarely test recovery procedures
+-multipke single points of failure
+-need to guess capacity
+
+RELIABILITY IN THE CLOUD ENVIRONMENT:
+-automatically recover from failure
+-test recovery procedures
+-scale horizontally to increase aggregate workload availability
+-stop guessing capacity
+-manage change in automation
+
+FOUNDATIONS: NETWORK TOPOLOGY
+foundational requirements are those whose scope extends beyond a single workload or project. before architecting any system, foundational requirements that influence reliability should be in place.
+(you must have sufficient network bandwith to your data center)
+
+FOUNDATIONS: SERVICE QUOTAS AND CONSTRAINTS
+understanding physical limits and resource constraints
+(service limits: Service Quotas and Fixed Limits)
+
+WORKLOAD ARCHITECTURE: DISTRIBUTED SYSTEMS
+-design your workload service architecture
+-service oriented architecture or microservices
+-architecture design to prevent failures
+-architecture design to mitigate failures
+
+CHANGE MANAGEMENT: MONITOR WORKLOAD
+-monitor behavior
+-amazon simple notification service (SNS)
+-review
+-amazon cloudwatch
+
+CHANGE MANAGEMENT DEPLOYMENT
+-use runbooks
+-integrate testing as part of deployment
+-use immutable infrastructure
+
+FAILURE MANAGEMENT: WITHSTAND COMPONENT FAILURES

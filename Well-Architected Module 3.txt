@@ -1,0 +1,81 @@
+Well-Architected Module 3
+
+SECURITY
+the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+(identity and access management, detection, infrastructure protection, data protection, incident response)
+
+SECURITY DESIGN PRINCIPLES
+-implement a strong identity foundation
+-use fine-grained access controls
+-apply security at all layers
+-automate security best practice
+-prepare for security events and automation
+
+SECURELY OPERATE
+security operations in the cloud: AWS accounts, AWS organizations, AWS control tower
+
+IDENTITY AND ACCESS MANAGEMENT: IDENTITIES
+managing human and machine identities
+-AWS identity and access management (IAM)
+-strong sign-in mechanisms
+-centralized identity provider
+-secure secrets
+
+IDENTITY AND ACCESS MANAGEMENT: PERMISSION
+manage permissions for human and machine identities
+-define access requirements
+-grant least priveleges
+-limit public and cross-account access
+-reduce permission continuosly
+
+IDENTITY AND ACCESS MANAGEMENT: AMAZON COGNITO
+-support multiple login providers
+-unique users/devices
+-helps implement security best practice
+
+SECURITY: DETECTIVE CONTROLS
+use detective controls to detect or identify a security event
+-lifecycle controls to establish operational baselines
+-internal auditing to examine controls
+-automated alerting
+
+DETECTION: AUTOMATING MISCONFIGURATION DETECTION AND RESPONSE
+aws provides a way to record resource configuration changes as they occur, and evaluate them againts rules you configure by using the aws config service.
+with conformance packs for AWS config, you confgure rules coupled with automated remediation. this enables you to automate response to misconfigurations.
+
+SECURITY: INFRASTRUCTURE PROTECTION
+infrastructure protection encompasses control methodologies necessary to meet best practices and industry or regulatory obligations.
+-trust boundaries
+-operating system
+-system security configuration
+-policy enforcement points
+
+INFRASTRUCTURE PROTECTION: CONTROL TRAFFIC AT ALL LAYERS
+layers in your architecture allow you to apply a defense in-depth approach to securing your networks.
+-use edge services (ex. amazon cloudfront with AWS WAF)
+-devide amazon virtual private cloud (amazon VPC) into layers using subnets
+-use all controls available
+
+INFRASTRUCTURE PROTECTION: USE MANAGED SERVICES
+use AWS managed services that reduce maintenance tasks:
+-managed service takes care of underlying instances or compute and therefore patching and hardening
+-customers can focus on securing their workload
+
+SECURITY: DATA PROTECTION
+data protection involves identifying and classifying the data you have, and then using controls and patterns to keep your data confidential while preserving its integrity and availability at rest and in transit.
+(data classification, keep people away from data, protection in transit)
+
+DATA PROTECTION: KEEP PEOPLE AWAY FROM DATA
+a security best practice for data protection is to use mechanisms to keep people away from data.
+-use continuous integration (CI) or Continuous deployment (CD)
+-determine which controls and processes are required
+
+SECURITY: INCIDENT RESPONSE
+incident response defines how the processes need to be in place to respond to and mitigate the potential impact of security incidents.
+(easy way to gain access, right-predeployed tools, conduct game days regulary)
+
+INCIDENT RESPONSE: TEMPLATED 'CLEAN ROOMS'
+create a new, trusted environment to conduct your investigations.
+	1.create or use an existing template
+	2.save locally or in amazon s3 bucket
+	3.use AWS cloudformation to create a stack based on your template. it constructs and configures your stack resources
